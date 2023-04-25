@@ -17,4 +17,4 @@ do
   value=`echo $value | jq -c --arg ns "$ns" --argjson nsConf "$(getConfig $ns)" '. + {($ns): $nsConf}'`
 done
 
-echo $value > ../../mainsail_config.json
+echo $value > ../../mainsail_backup.json
